@@ -56,7 +56,7 @@ spec:
       }
       steps {
         container('tools') {
-            sh "git clone https://$GIT_CREDS_USR:$GIT_CREDS_PSW@${env.GIT_REPO_URL}"
+            sh "git clone https://github.com/hemanth344/rsvpapp-kustomize.git"
             sh "git config --global user.email ${env.GIT_REPO_EMAIL}"
           dir("rsvpapp-kustomize") {
               sh "git checkout ${env.GIT_REPO_BRANCH}"
